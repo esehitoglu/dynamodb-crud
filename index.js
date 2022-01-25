@@ -1,3 +1,4 @@
+// I installed express and defined endpoint
 const express = require('express')
 const app = express()
 const endpoint = require('./routes/api')

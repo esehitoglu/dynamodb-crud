@@ -1,6 +1,9 @@
+//we installed aws
 const AWS = require('aws-sdk')
+// we installed uuid
 const { v4: uuidv4 } = require('uuid')
 
+// aws connection settings have been made
 AWS.config.update({
     region: "us-east-1",
     accessKeyId: "AKIAXE4QWHK2VPQFMHEJ",
@@ -8,6 +11,7 @@ AWS.config.update({
     endpoint: "https://dynamodb.us-east-1.amazonaws.com"
 })
 
+// DynamoDB made the connection
 let docClient = new AWS.DynamoDB.DocumentClient()
 var table = "Products"
 

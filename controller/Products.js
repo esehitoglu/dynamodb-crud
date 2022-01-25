@@ -1,5 +1,6 @@
 const productsService = require('../services/products')
 
+// I wrote the control functions of the /products path
 exports.addProduct = async(req,res) => {
     const response = await productsService.addProduct(req.body)
     res.send(response)
