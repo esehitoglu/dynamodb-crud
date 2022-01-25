@@ -12,7 +12,6 @@ exports.fetchAllProduct = async(req,res)=>{
 }
 
 exports.singleProduct = async(req,res)=>{
-    //console.log(req.params)
     const response =await productsService.singleProduct(req.params)
     res.send(response)
 }

@@ -1,34 +1,73 @@
-# a101 Bootcamp Ödev2 - Ensar Şehitoğlu - Didem Kavlak Gedik
 
-## Node.JS Boilerplate ve Trendyol Entegrasyonu
+# 🚀 A101 Bootcamp Third Week Exercise 🌞
 
-* JWT entegrasyonu ve Error Handler entegrasyonu yapıldı.
-<p align="center">
-  <img src="https://github.com/A101-Node-js-TypeScript-Bootcamp/a101-bootcamp-odev2-esehitoglu-didemkavlak/blob/main/figures/1.png" alt="animated" />
-</p>
-<p align="center">
-  <img src="https://github.com/A101-Node-js-TypeScript-Bootcamp/a101-bootcamp-odev2-esehitoglu-didemkavlak/blob/main/figures/2.png" alt="animated" />
-</p>
-* JWT sign etmeden önce “joi” ile validasyon kontrolü gerçekleştirildi.
-<p align="center">
-  <img src="https://github.com/A101-Node-js-TypeScript-Bootcamp/a101-bootcamp-odev2-esehitoglu-didemkavlak/blob/main/figures/6.png" alt="animated" />
-</p>
-* Trendyol markalar GET endpointi ve bu endpointe id ya da name ile query params eklenedi.
-<p align="center">
-  <img src="https://github.com/A101-Node-js-TypeScript-Bootcamp/a101-bootcamp-odev2-esehitoglu-didemkavlak/blob/main/figures/3.png" alt="animated" />
-</p>
+This project is about jwt, express and Trendyol integration.
 
-* Trendyol kategorileri, single kategori GET endpointi oluşturuldu.
-<p align="center">
-  <img src="https://github.com/A101-Node-js-TypeScript-Bootcamp/a101-bootcamp-odev2-esehitoglu-didemkavlak/blob/main/figures/4.png" alt="animated" />
-</p>
-<p align="center">
-  <img src="https://github.com/A101-Node-js-TypeScript-Bootcamp/a101-bootcamp-odev2-esehitoglu-didemkavlak/blob/main/figures/5.png" alt="animated" />
-</p>
+# ✨ Installation
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left">
- <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>
- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>
-<a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a>
-<a href="https://expressjs.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> </p>
+
+Run :
+
+```bash
+    npm install
+```
+
+The above code creates node_models file ,
+
+Use the code below to start the application
+
+```bash
+    node index
+```
+
+# Previews
+
+📗 1) Write a POST endpoint that adds products to the Products table
+
+![Uygulama Ekran Görüntüsü]()
+
+
+📘 2) Write a GET endpoint that returns all added products.
+
+📘 2a) A filter will be created by using query params according to productId among all products.Enter the endpoint.
+
+📘 2b) There is a filter among all products that will filter according to the discounted products.
+Enter the endpoint.
+
+📙 3) Write a DELETE endpoint that will delete any product with its productId (on
+Any product with isDiscount should not be deleted, an error should be returned)
+
+📕 4) Write an UPDATE service that will change the stock of any product.
+## Used technologies
+
+**İstemci:** Javascript
+
+**Sunucu:** Node, Express , Amazon DynamoDB
+
+   # Directory structure
+
+   - [README.md](README.md)
+   - __controller__
+     - [Products.js](controller/Products.js)
+   - __figures__
+     - [1.png](figures/1.png)
+     - [1\_1.png](figures/1_1.png)
+     - [2.png](figures/2.png)
+     - [2\_1.png](figures/2_1.png)
+     - [2a.png](figures/2a.png)
+     - [2b.png](figures/2b.png)
+     - [3.png](figures/3.png)
+     - [3\_1.png](figures/3_1.png)
+     - [3\_2.png](figures/3_2.png)
+     - [4.png](figures/4.png)
+     - [4\_1.png](figures/4_1.png)
+   - [index.js](index.js)
+   - [node\_modules](node_modules)
+   - [package\-lock.json](package-lock.json)
+   - [package.json](package.json)
+   - __routes__
+     - [api.js](routes/api.js)
+     - __products__
+       - [products.js](routes/products/products.js)
+   - __services__
+     - [products.js](services/products.js)

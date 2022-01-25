@@ -1,5 +1,6 @@
 //we installed aws
 const AWS = require('aws-sdk')
+
 // we installed uuid
 const { v4: uuidv4 } = require('uuid')
 
@@ -74,7 +75,6 @@ exports.fetchAllProduct = async(params)=>{
 
 // 2a) A filter will be created by using query params according to productId among all products.Enter the endpoint.
 exports.singleProduct = async(params)=>{
-    
     var items = {
         TableName:table,
         Key:{
@@ -85,7 +85,7 @@ exports.singleProduct = async(params)=>{
         const data = await docClient.get(items).promise()
         return{
             status:true,
-            message:"Ürün bulundu",
+            message:"Product found",
             product:data
         }
     }catch(err){
@@ -134,10 +134,12 @@ exports.deleteProduct = async(params)=>{
             productId: params.productId
         }
     };
+    
     try{
         const data = await docClient.get(items).promise()
         const control = data.Item.isDiscount
         console.log(data)
+        console.log(control)
         if(control === true){
             console.log("silinemez")
             return{
@@ -186,7 +188,7 @@ exports.updateProduct = async(params)=>{
         await docClient.update(items).promise()
         return{
             status:true,
-            message:"veri güncellendi"
+            message:"Data updated"
         }
     }catch(err){
 
