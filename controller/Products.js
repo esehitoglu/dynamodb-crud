@@ -16,6 +16,11 @@ exports.singleProduct = async(req,res)=>{
     res.send(response)
 }
 
+exports.singleProductQuery = async(req,res)=>{
+    const response =await productsService.singleProductQuery(req.body)
+    res.send(response)
+}
+
 exports.fetchIsDiscount = async(req,res)=>{
     const response = await productsService.fetchIsDiscount()
     res.send(response)

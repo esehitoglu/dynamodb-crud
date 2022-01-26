@@ -127,11 +127,14 @@ SQL veritabanları örneği: MySQL, Oracle, MS-SQL, SQLite. | NoSQL veritabanı 
 
   <img src="https://omerdemirarslan.com/wp-content/uploads/2020/03/MONGODBSQLFARK-768x355.jpg" />
 
-  ### 🌟 Veri Depolama Yöntemleri
-
+  <h3 align="center"> 🌟 Veri Depolama Yöntemleri </h3>
+  <p align="center">
   <img src="https://miro.medium.com/max/998/1*8cFTeBVP4WnbhTNd0IzCdA.jpeg" />
-  
+  </p>
+
+  <p align="center">
   <img src="https://media-exp1.licdn.com/dms/image/C4D12AQGhr_W7C028Zw/article-cover_image-shrink_720_1280/0/1609416011335?e=1648684800&v=beta&t=zB-lDxsLRb_KJfpU3QSwtTP2Af4JcBZxpFa0ATumDVs" />
+  </p>
 
 <p align="center">
   <img src="https://media3.giphy.com/media/l4FAPaGGeB7D1LfIA/giphy.gif?cid=ecf05e47v7tl4lqkwqi94wxr0h96a7enpcsvqcspuf5xkotr&rid=giphy.gif&ct=g" />

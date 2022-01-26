@@ -96,6 +96,33 @@ exports.singleProduct = async(params)=>{
     }
 }
 
+// 2a) A filter will be created by using query params according to productId among all products.Enter the endpoint.
+exports.singleProductQuery = async(params)=>{
+    var items = {
+        TableName:table,
+        KeyConditionExpression: "#productId = :id",
+        ExpressionAttributeNames:{
+            "#productId": "productId"
+        },
+        ExpressionAttributeValues: {
+            ":id": params.productId
+        }
+    };
+    try{
+        const data = await docClient.query(items).promise()
+        return{
+            status:true,
+            message:"Product found",
+            product:data
+        }
+    }catch(err){
+        return{
+            status:false,
+            message:err
+        }
+    }
+}
+
 /* 2b) There is a filter among all products that will filter according to the discounted products.
 Enter the endpoint. */
 exports.fetchIsDiscount = async(params)=>{
