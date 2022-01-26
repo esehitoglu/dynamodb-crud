@@ -171,7 +171,7 @@ exports.deleteProduct = async(params)=>{
             console.log("silinemez")
             return{
                 status:false,
-                massage:"İndirimli ürün silinemez!",
+                massage:"The discounted product cannot be deleted!",
                 errormassage:err
             }
         }else{
@@ -182,16 +182,38 @@ exports.deleteProduct = async(params)=>{
                 message:data
             }
         }
-        //await docClient.delete(items).promise()
-        /*
-        return{
-            status:true,
-            message:"deneme"
-        }*/
     }catch(err){
         return{
             status:false,
             massage:"İndirimli ürün silinemez!",
+            errmessage:err
+        }
+    }
+}
+
+exports.delete = async(params)=>{
+    var items = {
+        TableName:table,
+        Key:{
+            productId: params.productId
+        },
+        ConditionExpression: "isDiscount = :isDiscount ",
+        ExpressionAttributeValues:{
+            ":isDiscount": false,
+        },
+    };
+    
+    try{
+        const data = await docClient.delete(items).promise()
+        return{
+            status:true,
+            massage:"the product has been deleted",
+            deletedData:data
+        }
+    }catch(err){
+        return{
+            status:false,
+            massage:"The discounted product cannot be deleted!!!",
             errmessage:err
         }
     }
