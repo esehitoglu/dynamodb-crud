@@ -134,7 +134,7 @@ exports.fetchIsDiscount = async(params)=>{
         },
 
         ExpressionAttributeValues: {
-             ":data": "true",
+             ":data": true,
         }
     }
     try{
