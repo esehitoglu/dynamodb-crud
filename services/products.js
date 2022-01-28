@@ -1,3 +1,4 @@
+require('dotenv').config()
 //we installed aws
 const AWS = require('aws-sdk')
 
@@ -6,10 +7,10 @@ const { v4: uuidv4 } = require('uuid')
 
 // aws connection settings have been made
 AWS.config.update({
-    region: "us-east-1",
-    accessKeyId: "AKIAXE4QWHK2VPQFMHEJ",
-    secretAccessKey: "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",
-    endpoint: "https://dynamodb.us-east-1.amazonaws.com"
+    region: process.env.REGION,
+    accessKeyId: process.env.ACCESSKEYID,
+    secretAccessKey: process.env.SECRETACCESSKEY,
+    endpoint: process.env.ENDPOINT
 })
 
 // DynamoDB made the connection
@@ -141,7 +142,7 @@ exports.fetchIsDiscount = async(params)=>{
         const data = await docClient.scan(items).promise()
         return{
             status:true,
-            message:"İndirimli ürünler",
+            message:"Discounted products",
             product:data
         }
     }catch(err){
@@ -185,7 +186,7 @@ exports.deleteProduct = async(params)=>{
     }catch(err){
         return{
             status:false,
-            massage:"İndirimli ürün silinemez!",
+            massage:"The discounted product cannot be deleted!",
             errmessage:err
         }
     }
